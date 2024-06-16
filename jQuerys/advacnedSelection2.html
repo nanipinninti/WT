@@ -12,16 +12,21 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
     <div class="container">
         <h2>Hello world</h2>
+        <button>click here to get color to the below div</button>
+    </div>
+    <div class='container2'>
+        <h3>It is another container in which initally not colored</h3>
     </div>
     <body>
         <script>
             $('document').ready(()=>{
-                let a = $('.container').css('background-color');
-                const re = /rgb\((\d+),(\d+),(\d+)\)/;
-                const matches = a.match(re);
-                console.log(matches);
-
-            })
+                const re = /^rgb\((\d+),\s(\d+),\s(\d+)\)$/;
+                $('button').click(function(){
+                    $('.container').css('background-color',(i,color)=>{
+                        $('.container2').css('background-color',color);
+                    })
+                })
+            })  
         </script>
     </body>
 </html>

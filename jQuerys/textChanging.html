@@ -1,17 +1,18 @@
+<!-- textChanging.html-->
 <html>
     <head>
         <script 
 
 src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<style>
-    
-</style>
 
     </head>
     <body>
+        <h1>Paragraph will change</h1>
+        <p>THis will be changed</p>
         <script>
             $('document').ready(()=>{
-                
+                console.log('Text before changed : ' ,$('h1').text());
+                $('p').text('Modified');
             })
         </script>
     </body>
