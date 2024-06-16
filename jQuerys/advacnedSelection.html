@@ -1,0 +1,40 @@
+<!-- advacnedSelection.html -->
+<html>
+    <head>
+        <script 
+
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <style>
+            .container{
+                background-color: gray;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="container">
+            <h1>Hello world!!</h1>
+            <button class="btn">clik me to just only change the color</button>
+            <button class="btn2">click here to change both backhround and text color</button>
+        </div>
+        <script>
+            $('document').ready(()=>{
+                // getting value of the attribute
+                let a = $('.container').css('background-color');
+                alert(a);
+                // modifying the background value when we clicked the button
+                $('.btn').click(()=>{
+                    $('.container').css('background-color','blue');
+                })
+                // modifying more than 1 attriute
+                $('.btn2').click(function(){
+                    $('.container').css({
+                        'background-color':'pink',
+                        'color':'red'
+                    })
+                })
+
+            })
+        </script>
+    </body>
+</html>

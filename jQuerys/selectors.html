@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <script 
+
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    </head>
+    <body>
+        <h1>Hello, Nani</h1>
+        <button class="btn">Click me</button>
+        <p id="p" class="p">This will be hidden when you click the button.</p>
+        <script>
+            let a = 0;
+            $(document).ready(function(){
+                $("button").click(()=>{
+                    if (a==0){
+                        $("#p").hide();
+                        a = 1;
+                    }
+                    else{
+                        $(".p").show();
+                        a = 0;
+                    }
+                    // to select all selectors $("*")
+                })
+            })
+        </script>
+    </body>
+</html>
