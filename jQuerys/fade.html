@@ -1,0 +1,40 @@
+<!-- file:///home/nani/Documents/E2/SEM%202/WT/Codes/jQuerys/.html -->
+<!-- fade.html -->
+<html>
+    <head>
+        <script 
+
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+    .container{
+        background-color: blue;
+        width: 100px;
+        height: 100px;
+    }
+</style>
+
+    </head>
+    <body>
+        <h1>Hello world!</h1>
+        <button class="fadein">Fade in</button>
+        <button class="fadeout">Fade out</button>
+        <button class="fadeToggle">Toggle</button>
+        <div class="container">
+
+        </div>
+        <script>
+            $('document').ready(()=>{
+                $('.fadein').click(function(){
+                    $('.container').fadeIn();
+                })
+                $('.fadeout').click(function(){
+                    $('.container').fadeOut();
+                })
+                $('.fadeToggle').click(function(){
+                    $('.container').fadeToggle('slow');
+                })
+                // we can also use fadeTo 
+            })
+        </script>
+    </body>
+</html>

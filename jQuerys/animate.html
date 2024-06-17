@@ -1,0 +1,57 @@
+<!-- animate.html -->
+<!-- file:///home/nani/Documents/E2/SEM%202/WT/Codes/jQuerys/.html -->
+<html>
+    <head>
+        <script 
+
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+    .container{
+        background-color: blue;
+        width: 100px;
+        height: 100px;
+        position: relative; /* it is madatory to get animations, fixed or absolute also allowed */
+    }
+</style>
+
+    </head>
+    <body>
+        <h1>Animation</h1>
+        <button class="right">Right</button>
+        <button class="width">width</button>
+        <button class="top">Top</button>
+        <button class="height">height</button>
+        <button class="stop">Stop</button>
+        <div class="container">
+
+        </div>
+        <script>
+            $('document').ready(()=>{
+                $('.right').click(function(){
+                    $('.container').animate({
+                        left : '100px'
+                    },'slow')
+                })
+                $('.width').click(function(){
+                    $('.container').animate({
+                        width : '200px'
+                    })
+                })
+                $('.height').click(function(){
+                    $('.container').animate({
+                        height : '500px'
+                    },3000)
+                })
+                $('.top').click(function(){
+                    $('.container').animate({
+                        top : '200px'
+                    })
+                })
+                $('.stop').click(function(){
+                    $('.container').stop()
+                    $('h1').text('Animation will stop')
+                })
+            })
+        </script>
+    </body>
+</html>

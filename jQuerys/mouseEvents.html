@@ -1,0 +1,37 @@
+<!-- file:///home/nani/Documents/E2/SEM%202/WT/Codes/jQuerys/.html -->
+<!-- mouseEvents.html -->
+<html>
+    <head>
+        <script 
+
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+    .container{
+        background-color: blue;
+        width: 100px;
+        height: 100px;
+    }
+</style>
+
+    </head>
+    <body>
+        <h1>Hello world!</h1>
+        <div class="container">
+
+        </div>
+        <script>
+            $('document').ready(()=>{
+                $('h1').click(function(e){
+                    console.log(this);
+                    console.log(e);
+                })
+                $('.container').mouseenter(()=>{
+                    $('.container').css('background-color','red');
+                });
+                $('.container').mouseleave(()=>{
+                    $('.container').css("background-color",'blue');
+                })
+            })
+        </script>
+    </body>
+</html>

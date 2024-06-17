@@ -1,0 +1,35 @@
+<!-- hideShow.html -->
+<!-- file:///home/nani/Documents/E2/SEM%202/WT/Codes/jQuerys/.html -->
+<html>
+    <head>
+        <script 
+
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+    #container{
+        background-color: blue;
+        width: 100px;
+        height: 100px;
+    }
+</style>
+
+    </head>
+    <body>
+        <h1>Hide and Show</h1>
+        <button id="btn1">Hide Box</button>
+        <button id="btn2">Show Box</button>
+        <div id="container">
+
+        </div>
+        <script>
+            $('document').ready(()=>{
+                $('#btn1').click(function(){
+                    $('#container').hide('slow');
+                });
+                $('#btn2').click(function(){
+                    $('#container').show('fast',()=>(alert("hi")));
+                })
+            })
+        </script>
+    </body>
+</html>

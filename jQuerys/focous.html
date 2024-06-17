@@ -1,0 +1,30 @@
+<!-- file:///home/nani/Documents/E2/SEM%202/WT/Codes/jQuerys/.html -->
+<html>
+    <head>
+        <script 
+
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+    
+</style>
+
+    </head>
+    <body>
+        <form action="">
+            Username : <input type="text"> <br>
+            Password : <input type="password"> <br>
+            <button type="submit">Submit</button>
+        </form>
+        <script>
+            $('document').ready(()=>{
+                $('input').focus(()=>(
+                    $('input').css('background-color','pink')
+                ));
+                $("input").blur(()=>(
+                    $('input').css('background-color','pink')
+                ))
+                // not working well
+            })
+        </script>
+    </body>
+</html>

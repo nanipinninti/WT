@@ -1,0 +1,35 @@
+
+<!-- file:///home/nani/Documents/E2/SEM%202/WT/Codes/jQuerys/.html -->
+<!-- hover.html -->
+<html>
+    <head>
+        <script 
+
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+    .container{
+        background-color: blue;
+        width: 100px;
+        height: 100px;
+    }
+</style>
+
+    </head>
+    <body>
+        <h1>Hello world!</h1>
+        <div class="container">
+
+        </div>
+        <script>
+            $('document').ready(()=>{
+                $('.container').hover(
+                    function(){
+                    $('.container').css('background-color','red');
+                },
+                function(){
+                    $('.container').css('background-color','blue');
+                })
+            })
+        </script>
+    </body>
+</html>
